@@ -1,5 +1,7 @@
 import Link from "next/link";
 import "./globals.css";
+import {Button, MantineProvider} from '@mantine/core';
+import "@mantine/core/styles.css";
 
 export const metadata = {
   title: "Next Routing Workshop",
@@ -26,15 +28,17 @@ export default function RootLayout({
             <Link href="/teachers">Teachers</Link>
             
             <Link href="/students">Students</Link>
+
+            <Link href="/courses">Courses</Link>
           </nav>
 
         </header>
 
-        <main style={{ padding: "1rem", flex: 1 }}>{children}</main>
+        <main style={{ padding: "1rem", height: "100vh" }}>{children}</main>
 
-        <footer>
-
-          <nav style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
+        <footer style={{padding: "1rem", borderTop: "1px solid #ddd", paddingTop: "5rem", paddingBottom: "5rem", fontWeight: "bold", textAlign: "center"}}>
+          
+          <nav style={{ display: "flex", gap: "1rem" , justifyContent: "center", marginBottom: "1rem" }}>
             <Link href="/">Home</Link>
 
             <Link href="/about">About</Link>
@@ -44,13 +48,15 @@ export default function RootLayout({
             <Link href="/teachers">Teachers</Link>
             
             <Link href="/students">Students</Link>
+
+            <Link href="/courses">Courses</Link>
           </nav>
 
-          <p style={{ padding: "1rem", textAlign: "center" }}>
-            &copy;{new Date().getFullYear()} Next Routing Workshop
+          <p>
+            &copy;{new Date().getFullYear()} Next Routing Workshop - Persian 
           </p>
         </footer>
-
+        
       </body>
     </html>
   );
